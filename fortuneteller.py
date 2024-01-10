@@ -22,6 +22,6 @@ class FortuneTeller:
         print("Начнем !")
 
     def guess_name(self):
-        print(f"Твое имя {self._name_client}")
+        print(f"Ты являешся {self._name_client}")
 
 
