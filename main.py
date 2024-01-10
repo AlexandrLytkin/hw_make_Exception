@@ -11,6 +11,8 @@ try:
         raise processingException('возникло исключение- ProcessingException')
 except ValueError as ex:
     print(f'возникло исключение- ValueError {ex}')
+else:
+    f'Исключений не было'
 finally:
     print('*' * 30)
 
