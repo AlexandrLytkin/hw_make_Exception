@@ -24,5 +24,3 @@ class FortuneTeller:
 
     def guess_name(self):
         print(f"Ты являешся {self._name_client}")
-
-
