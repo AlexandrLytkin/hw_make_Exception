@@ -23,8 +23,8 @@ except NameError as ex:
 except ValueError as ex:
     if people is None:
         print(f'возникло исключение- ValueError {ex}')
-    else:
-        f'Исключений не было'
+else:
+    f'Исключений не было'
 
 try:
     witch.fortune_telling()
