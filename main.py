@@ -24,4 +24,7 @@ except ValueError as ex:
     else:
         f'Исключений не было'
 
-witch.fortune_telling()
+try:
+    witch.fortune_telling()
+except NameError as ex:
+    print(f"Не получилось создать обьект и вызвать метод")
