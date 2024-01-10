@@ -5,16 +5,17 @@ from fortuneteller import FortuneTeller
 name = str(input("what is your name: "))
 age = int(input("How old are you: "))
 
-try:
-    people = Person(name, age)
-    if name == 'Глаша':
-        raise processingException('возникло исключение- ProcessingException')
-except ValueError as ex:
-    print(f'возникло исключение- ValueError {ex}')
-else:
-    f'Исключений не было'
-finally:
-    print('*' * 30)
+people = Person(name, age)
+# try:
+#     people = Person(name, age)
+#     if name == 'Глаша':
+#         raise processingException('возникло исключение- ProcessingException')
+# except ValueError as ex:
+#     print(f'возникло исключение- ValueError {ex}')
+# else:
+#     f'Исключений не было'
+# finally:
+#     print('*' * 30)
 
 try:
     witch = FortuneTeller('Глаша', name_client=people)

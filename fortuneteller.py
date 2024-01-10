@@ -13,6 +13,7 @@ class FortuneTeller:
         self.guess_name()
 
     def timer(self):
+        time.sleep(1.5)
         print('Одеваю палатье')
         time.sleep(1.5)
         print('Одеваю туфли')
