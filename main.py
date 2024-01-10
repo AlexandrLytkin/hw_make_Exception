@@ -5,19 +5,21 @@ from fortuneteller import FortuneTeller
 name = str(input("what is your name: "))
 age = int(input("How old are you: "))
 
-try:
-    people = Person(name, age)
-    if name == 'Глаша':
-        raise processingException('возникло исключение- ProcessingException')
-except ValueError as ex:
-    print(f'возникло исключение- ValueError {ex}')
-finally:
-    print('*' * 30)
+# try:
+#     people = Person(name, age)
+#     if name == 'Глаша':
+#         raise processingException('возникло исключение- ProcessingException')
+# except ValueError as ex:
+#     print(f'возникло исключение- ValueError {ex}')
+# finally:
+#     print('*' * 30)
 
 try:
     witch = FortuneTeller('Глаша', name_client=people)
     if people is None:
         raise invalidDataException('возникло исключение- InvalidDataException')
+except NameError as ex:
+    print(f"Не получилось создать обьект человека и создать ведьму")
 except ValueError as ex:
     if people is None:
         print(f'возникло исключение- ValueError {ex}')
@@ -27,4 +29,4 @@ except ValueError as ex:
 try:
     witch.fortune_telling()
 except NameError as ex:
-    print(f"Не получилось создать обьект и вызвать метод")
+    print(f"Не получилось создать обьект и вызвать функцию по гадать")
