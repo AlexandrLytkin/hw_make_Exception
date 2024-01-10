@@ -21,8 +21,7 @@ try:
 except NameError as ex:
     print(f"Не получилось создать обьект человека и создать ведьму")
 except ValueError as ex:
-    if people is None:
-        print(f'возникло исключение- ValueError {ex}')
+    print(f'возникло исключение- ValueError {ex}')
 else:
     f'Исключений не было'
 
