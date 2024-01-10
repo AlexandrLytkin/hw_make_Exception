@@ -17,7 +17,7 @@ finally:
 try:
     witch = FortuneTeller('Глаша', name_client=people)
     if people is None:
-        raise processingException('возникло исключение- InvalidDataException')
+        raise invalidDataException('возникло исключение- InvalidDataException')
 except ValueError as ex:
     if people is None:
         print(f'возникло исключение- ValueError {ex}')
